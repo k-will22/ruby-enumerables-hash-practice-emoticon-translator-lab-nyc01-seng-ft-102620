@@ -18,18 +18,14 @@ def get_english_meaning(file, emoticon)
   emo_library = {}
   new_library = load_library(file)
   new_library.each do |key, value|
-     emo_library = value 
-     emo_library
-     emo_library.each do |english, japanese|
-
-    if emo_library[english] == emoticon 
-      return emo_library[japanese]
+     if value.include?(emoticon)
+       return key 
     else 
       return "Sorry, that emoticon was not found"
 end 
 end 
 end 
-end 
+
 =begin
    value.each do |english, japanese|
    if english == emoticon 
