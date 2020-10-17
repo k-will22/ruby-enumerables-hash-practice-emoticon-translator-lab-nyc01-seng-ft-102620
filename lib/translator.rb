@@ -16,14 +16,14 @@ end
 def get_english_meaning(file, emoticon)
   # code goes here
   new_library = load_library(file)
-  new_library.each do |key, value|
-       
-     if key[value].has_value?(emoticon)
-       return key 
-    else 
-       return "Sorry, that emoticon was not found"
-end 
-end 
+  library = YAML.load_file(file)
+  new_library = {"get_meaning" => {},
+                 "get_emoticon" => {}}
+  library.each do |meaning,value|
+    new_library["get_meaning"][value[1]] = meaning 
+    new_library["get_emoticon"][value[0]] = value[1]
+    english_meaning = new_library["get_meaning"][emoticon]
+    english_meaning ? english_meaning : "Sorry, that emoticon was not found"
 end 
 
 =begin
