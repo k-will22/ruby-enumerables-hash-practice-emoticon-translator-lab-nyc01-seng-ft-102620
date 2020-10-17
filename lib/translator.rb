@@ -19,9 +19,9 @@ def get_english_meaning(file, emoticon)
   new_library.each do |key, value|
 
      if new_library[:japanese] == emoticon 
-       return new_library[key] 
+       new_library[key] 
     else 
-      return "Sorry, that emoticon was not found"
+      "Sorry, that emoticon was not found"
 end 
 end 
 end 
