@@ -33,7 +33,7 @@ def get_english_meaning(file, emoticon)
        else 
          return result 
        end 
-     end 
+    
 =begin
    value.each do |english, japanese|
    if english == emoticon 
