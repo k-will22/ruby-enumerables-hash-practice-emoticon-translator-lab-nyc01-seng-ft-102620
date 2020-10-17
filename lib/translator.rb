@@ -20,7 +20,7 @@ def get_english_meaning(file, emoticon)
    value.each do |emo|
 binding.pry 
 
-end 
+
 end 
 
 =begin
