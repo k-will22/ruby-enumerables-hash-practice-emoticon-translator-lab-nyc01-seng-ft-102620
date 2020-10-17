@@ -36,7 +36,6 @@ def get_japanese_emoticon(file, emoticon)
    library.each do |translation, value| 
      new_library["meaning"][value[1]] = translation 
      new_library["emoticon"][value[0]] = value[1]
-binding.pry 
    end 
      japanese = new_library["emoticon"][emoticon]
      japanese ? japanese : "Sorry, that emoticon was not found"
