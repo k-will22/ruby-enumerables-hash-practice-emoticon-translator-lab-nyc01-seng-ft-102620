@@ -20,7 +20,6 @@ def get_english_meaning(file, emoticon)
 
      if value[:japanese] == emoticon 
        return key 
-  binding.pry
     else 
       return "Sorry, that emoticon was not found"
 end 
