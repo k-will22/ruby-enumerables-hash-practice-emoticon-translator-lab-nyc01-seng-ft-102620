@@ -28,7 +28,7 @@ binding pry
 end 
 end 
 end 
-
+end 
 =begin
    value.each do |english, japanese|
    if english == emoticon 
