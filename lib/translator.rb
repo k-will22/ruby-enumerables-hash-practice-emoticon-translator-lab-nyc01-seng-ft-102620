@@ -22,6 +22,7 @@ def get_english_meaning(file, emoticon)
    library.each do |meaning, value| 
      new_library["get_meaning"][value[1]] = meaning 
      new_library["get_emoticon"][value[0]] = value[1]
+   end 
      result = nil 
      new_library["get_meaning"].each do |emo, translation| 
        if emo == emoticon 
