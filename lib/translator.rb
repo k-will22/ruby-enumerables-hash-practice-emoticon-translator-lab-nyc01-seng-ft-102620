@@ -17,26 +17,26 @@ def get_english_meaning(file, emoticon)
   # code goes here
   new_library = load_library(file)
   library = YAML.load_file(file)
-  new_library = {"get_meaning" => {},
-                 "get_emoticon" => {}}
+  new_library = {"meaning" => {},
+                 "emoticon" => {}}
    library.each do |meaning, value| 
-     new_library["get_meaning"][value[1]] = meaning 
-     new_library["get_emoticon"][value[0]] = value[1]
+     new_library["meaning"][value[1]] = meaning 
+     new_library["emoticon"][value[0]] = value[1]
    end 
-     english = new_library["get_emoticon"][emoticon]
-     english_meaning ? english_meaning : "Sorry, that emoticon was not found"
+     english = new_library["meaning"][emoticon]
+     english ? english : "Sorry, that emoticon was not found"
 end 
 
 def get_japanese_emoticon(file, emoticon)
   # code goes here 
   new_library = load_library(file)
   library = YAML.load_file(file)
-  new_library = {"get_meaning" => {},
-                 "get_emoticon" => {}}
+  new_library = {"meaning" => {},
+                 "emoticon" => {}}
    library.each do |meaning, value| 
-     new_library["get_meaning"][value[1]] = meaning 
-     new_library["get_emoticon"][value[0]] = value[1]
+     new_library["meaning"][value[1]] = meaning 
+     new_library["emoticon"][value[0]] = value[1]
    end 
-     japanese = new_library["get_emoticon"][emoticon]
+     japanese = new_library["emoticon"][emoticon]
      japanese ? japanese : "Sorry, that emoticon was not found"
     end
