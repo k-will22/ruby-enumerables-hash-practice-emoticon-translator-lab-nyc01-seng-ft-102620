@@ -17,8 +17,7 @@ def get_english_meaning(file, emoticon)
   # code goes here
   new_library = load_library(file)
   new_library.each do |key, value|
-  if value.include?(emoticon) 
-    return value
+   value.each do |emo|
 binding.pry 
   else 
     return "Sorry, that emoticon was not found"
