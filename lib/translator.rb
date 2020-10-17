@@ -45,6 +45,6 @@ def get_japanese_emoticon(file, emoticon)
      emo_library["get_meaning"][value[1]] = meaning 
      emo_library["get_emoticon"][value[0]] = value[1]
    end 
-     english_meaning = emo_library["get_meaning"][emoticon]
+     english_meaning = emo_library["get_emoticon"][emoticon]
      english_meaning ? english_meaning : "Sorry, that emoticon was not found"
     end
