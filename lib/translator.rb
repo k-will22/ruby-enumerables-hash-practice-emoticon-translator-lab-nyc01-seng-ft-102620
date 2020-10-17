@@ -15,16 +15,13 @@ end
 
 def get_english_meaning(file, emoticon)
   # code goes here
+  emo_library = {}
   new_library = load_library(file)
   new_library.each do |key, value|
    value.each do |k, v|
-     v 
-     if v === emoticon 
-       next v 
-     else 
-       return "Sorry, that emoticon was not found"
-end 
-end 
+     emo_library >> v 
+     emo_library 
+binding.pry 
 end 
 end 
 
