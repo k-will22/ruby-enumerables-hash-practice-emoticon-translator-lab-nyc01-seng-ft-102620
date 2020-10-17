@@ -18,7 +18,7 @@ def get_english_meaning(file, emoticon)
   emo_library = {}
   new_library = load_library(file)
   new_library.each do |key, value|
-     if key.deep_find(emoticon)
+     if value.deep_find(emoticon)
        return new_library[key] 
     else 
       return "Sorry, that emoticon was not found"
