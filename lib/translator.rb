@@ -23,16 +23,16 @@ def get_english_meaning(file, emoticon)
      new_library["get_meaning"][value[1]] = meaning 
      new_library["get_emoticon"][value[0]] = value[1]
    end 
-     result = nil 
+     response = nil 
      new_library["get_meaning"].each do |emo, translation| 
        if emo == emoticon 
-         result = translation
+         response  = translation
        end 
     end 
-       if result = nil 
+       if response = nil 
          return "Sorry, that emoticon was not found" 
        else 
-         return result 
+         return response 
        end 
     end 
 =begin
