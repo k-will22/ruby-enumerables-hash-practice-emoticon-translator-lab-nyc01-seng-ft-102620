@@ -12,7 +12,7 @@ def load_library(file)
     end 
   new_library
 end
-
+=begin
 def get_english_meaning(file, emoticon)
   # code goes here
   new_library = load_library(file)
@@ -23,19 +23,9 @@ def get_english_meaning(file, emoticon)
      new_library["get_meaning"][value[1]] = meaning 
      new_library["get_emoticon"][value[0]] = value[1]
    end 
-     response = nil 
-     new_library["get_meaning"].each do |emo, translation| 
-       if emo == emoticon 
-         response  = translation
-       end 
+     english_meaning = new_library["get_meaning"]
     end 
-       if response = nil 
-         return "Sorry, that emoticon was not found" 
-       else 
-         return response 
-       end 
-    end 
-=begin
+=end
    value.each do |english, japanese|
    if english == emoticon 
      return japanese
@@ -50,4 +40,3 @@ def get_japanese_emoticon(file, emoticon)
   new_library = load_library(file)
  
 end
-=end 
