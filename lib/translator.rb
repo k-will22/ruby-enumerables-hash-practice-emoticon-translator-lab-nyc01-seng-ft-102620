@@ -22,7 +22,7 @@ def get_english_meaning(file, emoticon)
 binding.pry 
 end 
 end 
-end 
+
 
 =begin
    value.each do |english, japanese|
