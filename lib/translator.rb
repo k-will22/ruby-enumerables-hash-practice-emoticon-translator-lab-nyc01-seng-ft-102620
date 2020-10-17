@@ -19,13 +19,21 @@ def get_english_meaning(file, emoticon)
   library = YAML.load_file(file)
   new_library = {"get_meaning" => {},
                  "get_emoticon" => {}}
-  library.each do |meaning,value|
-    new_library["get_meaning"][value[1]] = meaning 
-    new_library["get_emoticon"][value[0]] = value[1]
-    english_meaning = new_library["get_meaning"][emoticon]
-    english_meaning ? english_meaning : "Sorry, that emoticon was not found"
-end 
-end 
+   library.each do |meaning, value| 
+     new_library["get_meaning"][value[1]] = meaning 
+     new_library["get_emoticon"][value[0]] = value[1]
+     result = nil 
+     new_library["get_meaning"].each do |emo, translation| 
+       if emo == emoticon 
+         result = translation
+       end 
+    end 
+       if result = nil 
+         return "Sorry, that emoticon was not found" 
+       else 
+         return result 
+       end 
+     end 
 =begin
    value.each do |english, japanese|
    if english == emoticon 
