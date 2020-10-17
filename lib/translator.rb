@@ -39,12 +39,12 @@ def get_japanese_emoticon(file, emoticon)
   # code goes here 
   new_library = load_library(file)
   library = YAML.load_file(file)
-  new_library = {"get_meaning" => {},
+  emo_library = {"get_meaning" => {},
                  "get_emoticon" => {}}
    library.each do |meaning, value| 
-     new_library["get_meaning"][value[1]] = meaning 
-     new_library["get_emoticon"][value[0]] = value[1]
+     emo_library["get_meaning"][value[1]] = meaning 
+     emo_library["get_emoticon"][value[0]] = value[1]
    end 
-     english_meaning = new_library["get_meaning"][emoticon]
+     english_meaning = emo_library["get_meaning"][emoticon]
      english_meaning ? english_meaning : "Sorry, that emoticon was not found"
     end
