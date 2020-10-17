@@ -25,7 +25,7 @@ def get_english_meaning(file, emoticon)
     english_meaning = new_library["get_meaning"][emoticon]
     english_meaning ? english_meaning : "Sorry, that emoticon was not found"
 end 
-
+end 
 =begin
    value.each do |english, japanese|
    if english == emoticon 
